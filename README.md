@@ -202,7 +202,7 @@ This Wave has 3 parts:
 
 If you do not finish part 3 of this wave (translating the pseudocode for `highestScoreFrom` to JavaScript), you are encouraged the leave the pseudocode as comments in your project submission. The goal for this wave is to practice translating logic to new JavaScript syntax.
 
-Our primary goal here is to see your practice and thought process, and we will review accordingly with respect to the practice and work put into the project overall, even if this wave isn't finished. If you got stuck, please reflect on you process and where you got stuck in the reflection questions when you submit to project
+Our primary goal here is to see your practice and thought process, and we will review accordingly with respect to the practice and work put into the project overall, even if this wave isn't finished. If you got stuck, please reflect on your process and where you got stuck in the reflection questions when you submit to project.
 
 Please ensure that your tests still run before project submission, of course. :)
 
