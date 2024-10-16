@@ -5,6 +5,7 @@
   "main": "index.js",
   "scripts": {
     "test": "jest",
+    "lint": "npx eslint",
     "coverage": "open coverage/lcov-report/index.html",
     "demo-game": "babel-node src/demo.js"
   },
