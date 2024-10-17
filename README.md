@@ -28,7 +28,7 @@ $ npm install
 
 Similar to using virtual environments in Python projects, this makes the Node Package Manager (`npm`) download and install any dependencies for the project (such as Jest).
 
-### When I `npm install`, I Get a Lot of Text: What do I do?!
+### When I `npm install`, I Get a Lot of Text: What Do I Do?!
 
 Managing external dependencies (packages/libraries that we use) in JavaScript projects is different than managing them in Python. In JavaScript, we use `npm` to manage dependencies, and those dependencies have other dependencies. Our dependencies may change over time, and those dependency's dependencies change, too! It's a lot.
 
