@@ -55,7 +55,6 @@ After the tests run, there is a short table that summarizes the coverage for eac
 ```bash
 $ npm run coverage
 ```
-(Note: This command **must** include `run` to in order to work since it is a customize script.)
 
 This is shorthand for the command `open coverage/lcov-report/index.html` and will open the coverage report in your default web browser.
 
@@ -74,9 +73,7 @@ You can start the demo game application with the following command:
 ```bash
 $ npm run demo-game
 ```
-(Note: This command **must** include `run` to in order to work since it is a customize script.)
-
-This will start the Adagrams prompt, and you can start a new game by typing `start` (or `start <num>` for a game with multiple players).
+This will start the Adagrams prompt, and you can start a new game by typing `start` (or `start <num>` for a game with multiple players). To exit the game you can either enter `exit` (you will have to enter this a few times) or press `Control + C` twice. 
 
 Once the game has started each player is prompted to play anagrams from the displayed letter bank until their turn completes. At the end of each round the player who played the best word (according to the logic you will implement in wave 4) is awarded points based on that word. Once all rounds are completed the game announced who won with the point total for that player.
 
