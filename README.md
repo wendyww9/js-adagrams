@@ -92,11 +92,11 @@ This repository has a baseline structure for the project that includes several f
 | File                  | Description                                                                                                                                                                                                              |
 | --------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
 | src/adagrams.js       | This is the project code, your implementation should complete each of the functions. Each function is exported.                                                                                                          |
-| test/adagrams.test.js | This file contains the unit tests for all functions you must implement. This file imports the functions from `adagrams.js`.                                                                                                                                                 |
+| test/adagrams.test.js | This file contains the unit tests for all functions you must implement. This file imports the functions from `adagrams.js`. This file also contains tests that you will need to complete.                                                                                                                                               |
 | package.json          | This is the [npm project description file](https://docs.npmjs.com/cli/v10/configuring-npm/package-json) for this project. It includes all of the dependencies, much like `requirements.txt` in our Python projects. It can also include other information such as scripts, descriptions, project versions, etc.    |
 | package-lock.json     | [package-lock.json](https://docs.npmjs.com/cli/v10/configuring-npm/package-lock-json) captures the exact dependency tree stored at any point in time. |
 | jest.config.js        | This is a configuration file for the Jest testing framework.                                                                                                                                                             |
-| babel.config.js       | This is a configuration file for the [Babel](https://babeljs.io/) compiler. For a short summary of why we use it, [click here](https://github.com/AdaGold/backbone-baseline#major-components)                            |
+| babel.config.js       | This is a configuration file for the [Babel](https://babeljs.io/) compiler.                    |
 
 ## Implementation Requirements
 
@@ -188,27 +188,3 @@ Implement the function named `highestScoreFrom` in `src/adagrams.js`. This metho
   - prefer the word with the fewest letters...
   - ...unless one word has 10 letters. If the top score is tied between multiple words and one is 10 letters long, choose the one with 10 letters over the one with fewer tiles
   - If the there are multiple words that are the same score and the same length, pick the first one in the supplied list
-
-#### Process
-
-This Wave has 3 parts:
-
-1. Adjust the syntax for the tests for `highestScoreFrom` to run, instead of skip. To do this, find the `describe` block for the tests of `highestScoreFrom`, and change the syntax from `describe.skip` to `describe`
-2. Write the pseudocode for this function, using whatever resources and references
-3. Translate the pseudocode into JavaScript, using whatever resources and references
-
-#### What If I Don't Finish This Wave?
-
-If you do not finish part 3 of this wave (translating the pseudocode for `highestScoreFrom` to JavaScript), you are encouraged the leave the pseudocode as comments in your project submission. The goal for this wave is to practice translating logic to new JavaScript syntax.
-
-Our primary goal here is to see your practice and thought process, and we will review accordingly with respect to the practice and work put into the project overall, even if this wave isn't finished. If you got stuck, please reflect on your process and where you got stuck in the reflection questions when you submit to project.
-
-Please ensure that your tests still run before project submission, of course. :)
-
-### Optional: Wave 5
-
-Encapsulate the functions in a class named `Adagrams`!
-
-- To export the `Adagrams` class, use the code `export default Adagrams` at the end of `adagrams.js`
-- Update the test file to use the `Adagrams` class. 
-- Remember, methods in classes are not comma-separated!
