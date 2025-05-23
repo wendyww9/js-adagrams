@@ -48,7 +48,7 @@ export const usesAvailableLetters = (input, lettersInHand) => {
   const letterCount = letterFrequency(lettersInHand);
 
   for (const letter of input.toUpperCase()) {
-    if (letter in letterCount && letterCount[letter] > 0) {
+    if (letterCount[letter] > 0) {
       letterCount[letter] -= 1;
     } else {return false;}
   }
