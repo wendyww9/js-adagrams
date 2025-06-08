@@ -30,15 +30,15 @@ export const drawLetters = () => {
   const drawnTiles = [];
   const availableTiles = []; 
   
-  for (const letter in letterPool) {
-    for (let i = 1; i <= letterPool[letter]; i++) {
-      availableTiles.push(letter);
-    } 
+  for (const [letter, count] of Object.entries(letterPool)) {
+    const newEntries = Array(count).fill(letter, 0);
+    availableTiles.push(...newEntries);
   };
 
   for (let i=0; i < 10; i++) {
     let letterIndex = Math.floor(Math.random() * availableTiles.length);
-    drawnTiles.push(availableTiles.splice(letterIndex, 1)[0]);
+    const drawTile = availableTiles.splice(letterIndex, 1)[0]
+    drawnTiles.push(drawTile);
     
   };
   return drawnTiles;
@@ -50,7 +50,9 @@ export const usesAvailableLetters = (input, lettersInHand) => {
   for (const letter of input.toUpperCase()) {
     if (letterCount[letter] > 0) {
       letterCount[letter] -= 1;
-    } else {return false;}
+    } else {
+      return false;
+    }
   }
 
   return true;
@@ -60,9 +62,7 @@ function letterFrequency(drawnTiles) {
   const letterCount = {};
 
   for (const letter of drawnTiles) {
-    if (letter in letterCount) {
-      letterCount[letter] += 1;
-    } else {letterCount[letter] = 1;}
+    letterCount[letter] = (letterCount[letter] || 0) + 1;
   }
 
   return letterCount;
@@ -105,9 +105,12 @@ export const highestScoreFrom = (words) => {
     const currentIsTen = word.length === 10;
     const bestIsTen = highestScoringWord.word.length === 10;
 
-    const isTieCurrentBetter =
-      (currentIsTen && !bestIsTen) ||
-      (!bestIsTen && word.length < highestScoringWord.word.length);
+    let isTieCurrentBetter = false;
+    if (currentIsTen && !bestIsTen) {
+      isTieCurrentBetter = true;
+    } else if (!bestIsTen && word.length < highestScoringWord.word.length) {
+      isTieCurrentBetter = true;
+    }
 
     if (isBetterScore || (isTie && isTieCurrentBetter)) {
       highestScoringWord = { word, score };
